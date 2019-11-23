@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es5",
+    "strict": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "types": [
+      "react"
+    ],
+    "jsx": "react",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
