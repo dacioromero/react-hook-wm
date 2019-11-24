@@ -2,6 +2,10 @@
 
 Hooks for integrating React with [Web Monetization](https://webmonetization.org/).
 
+## Install
+
+    $ npm install react-hook-wm
+
 ## Hooks
 
 ### useStatus

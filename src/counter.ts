@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { useImmerReducer } from 'use-immer'
+import { useEffect, useReducer } from 'react'
 
 import {
   MonetizationProgresssEvent,
@@ -19,16 +18,20 @@ interface ProgressAction {
 
 type Action = ProgressAction
 
-function reducer(state: Counter, action: Action): Counter | void {
+function reducer(state: Counter, action: Action): Counter {
   switch (action.type) {
     case 'progress':
-      const { amount, assetCode, assetScale } = action.payload
+      const { amount, assetCode: code, assetScale: scale } = action.payload
 
-      state.code = assetCode
-      state.scale = assetScale
-      state.total += Number(amount) * 10 ** -assetScale
+      const total = state.total + Number(amount) * 10 ** -scale
 
-      return
+      return {
+        total,
+        code,
+        scale
+      }
+    default:
+      return state
   }
 }
 
@@ -39,7 +42,7 @@ const initialState: Counter = {
 }
 
 export function useCounter(): Counter {
-  const [counter, dispatch] = useImmerReducer(reducer, initialState)
+  const [counter, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
     const { monetization } = document
