@@ -26,7 +26,7 @@ export type MonetizationEvent = CustomEvent<MonetizationEventDetail>
 export type MonetizationPendingEvent = MonetizationEvent
 export type MonetizationStartEvent = MonetizationEvent
 export type MonetizationStopEvent = MonetizationEvent
-export type MonetizationProgresssEvent = CustomEvent<
+export type MonetizationProgressEvent = CustomEvent<
   MonetizationProgressEventDetail
 >
 
@@ -34,7 +34,7 @@ interface MonetizationEventMap {
   monetizationpending: MonetizationPendingEvent
   monetizationstart: MonetizationStartEvent
   monetizationstop: MonetizationStopEvent
-  monetizationprogress: MonetizationProgresssEvent
+  monetizationprogress: MonetizationProgressEvent
 }
 
 export type MonetizationState = 'stopped' | 'pending' | 'started'
@@ -46,14 +46,16 @@ interface Monetization extends EventTarget {
     type: T,
     listener: MonetizationEventListenerOrListenerObject<
       MonetizationEventMap[T]
-    > | null
+    > | null,
+    options?: boolean | AddEventListenerOptions
   ): void
 
   removeEventListener<T extends keyof MonetizationEventMap>(
     type: T,
     listener: MonetizationEventListenerOrListenerObject<
       MonetizationEventMap[T]
-    > | null
+    > | null,
+    options?: EventListenerOptions | boolean
   ): void
 }
 

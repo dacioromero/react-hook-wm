@@ -11,13 +11,13 @@ export function useStatus(): MonetizationState | null {
 
     if (!monetization) return
 
-    monetization.addEventListener('monetizationstart', forceUpdate)
     monetization.addEventListener('monetizationpending', forceUpdate)
+    monetization.addEventListener('monetizationstart', forceUpdate)
     monetization.addEventListener('monetizationstop', forceUpdate)
 
     return (): void => {
-      monetization.removeEventListener('monetizationstart', forceUpdate)
       monetization.removeEventListener('monetizationpending', forceUpdate)
+      monetization.removeEventListener('monetizationstart', forceUpdate)
       monetization.removeEventListener('monetizationstop', forceUpdate)
     }
   }, [forceUpdate])
