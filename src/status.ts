@@ -1,3 +1,5 @@
+import { MonetizationState } from 'types-wm'
+
 import { useForceUpdate } from './utils'
 import { useListener } from './listener'
 

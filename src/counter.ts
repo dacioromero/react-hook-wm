@@ -1,6 +1,7 @@
 import { useReducer, useRef } from 'react'
 
 import { useListener } from './listener'
+import { MonetizationProgressEvent } from 'types-wm'
 
 interface Counter {
   total: number

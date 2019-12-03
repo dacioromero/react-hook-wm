@@ -1,4 +1,10 @@
 import { useRef, useEffect } from 'react'
+import {
+  MonetizationPendingEvent,
+  MonetizationStartEvent,
+  MonetizationProgressEvent,
+  MonetizationStopEvent
+} from 'types-wm'
 
 export interface UseListenerOptions {
   onPending?: (event: MonetizationPendingEvent) => void

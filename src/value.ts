@@ -1,4 +1,6 @@
 import { useState, useDebugValue } from 'react'
+import { MonetizationEvent } from 'types-wm'
+
 import { useListener } from './listener'
 
 type MonetizationEventDetail = MonetizationEvent['detail']

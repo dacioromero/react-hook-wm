@@ -12,8 +12,7 @@
       "dom"
     ],
     "types": [
-      "react",
-      "web-monetization"
+      "react"
     ],
     "jsx": "react",
     "noFallthroughCasesInSwitch": true,
