@@ -1,9 +1,7 @@
 import { useState, useDebugValue } from 'react'
-import { MonetizationEvent } from 'types-wm'
+import { MonetizationEvent, MonetizationEventDetail } from 'types-wm'
 
 import { useListener } from './listener'
-
-type MonetizationEventDetail = MonetizationEvent['detail']
 
 type UseValue<T extends keyof MonetizationEventDetail> = () =>
   | MonetizationEventDetail[T]
