@@ -4,6 +4,10 @@ Hooks for integrating React with [Web Monetization](https://webmonetization.org/
 ## Install
     $ npm install react-hook-wm
 
+or
+
+    $ yarn add react-hook-wm
+
 ## Hooks
 
 ### useListener
