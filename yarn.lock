@@ -41,6 +41,14 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/web-monetization@dacioromero/wm-types":
+  version "1.0.0"
+  resolved "https://codeload.github.com/dacioromero/wm-types/tar.gz/b2af2b977cdba757c58018165bd89db084f46f79"
+
+"@types/web-monetization@dacioromero/wm-types#1.0.0":
+  version "0.1.0"
+  resolved "https://codeload.github.com/dacioromero/wm-types/tar.gz/cfe93f5797eb85ded5edd68a123e28c5fb62e2df"
+
 "@typescript-eslint/eslint-plugin@^2.8.0":
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.8.0.tgz#eca584d46094ebebc3cb3e9fb625bfbc904a534d"

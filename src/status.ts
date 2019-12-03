@@ -1,27 +1,16 @@
-import { useEffect } from 'react'
-
-import { MonetizationState } from './types'
 import { useForceUpdate } from './utils'
+import { useListener } from './listener'
 
 export function useStatus(): MonetizationState | null {
   const forceUpdate = useForceUpdate()
 
-  useEffect(() => {
-    const { monetization } = document
+  useListener({
+    onPending: forceUpdate,
+    onStart: forceUpdate,
+    onStop: forceUpdate
+  })
 
-    if (!monetization) return
-
-    monetization.addEventListener('monetizationpending', forceUpdate)
-    monetization.addEventListener('monetizationstart', forceUpdate)
-    monetization.addEventListener('monetizationstop', forceUpdate)
-
-    return (): void => {
-      monetization.removeEventListener('monetizationpending', forceUpdate)
-      monetization.removeEventListener('monetizationstart', forceUpdate)
-      monetization.removeEventListener('monetizationstop', forceUpdate)
-    }
-  }, [forceUpdate])
-
+  // SSR support
   if (typeof document === 'undefined') return null
 
   return document.monetization?.state ?? null

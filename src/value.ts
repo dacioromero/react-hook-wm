@@ -1,5 +1,7 @@
-import { useState, useEffect, useDebugValue } from 'react'
-import { MonetizationEvent, MonetizationEventDetail } from './types'
+import { useState, useDebugValue } from 'react'
+import { useListener } from './listener'
+
+type MonetizationEventDetail = MonetizationEvent['detail']
 
 type UseValue<T extends keyof MonetizationEventDetail> = () =>
   | MonetizationEventDetail[T]
@@ -16,27 +18,16 @@ function createUseValue<T extends keyof MonetizationEventDetail>(
 
     useDebugValue(key)
 
-    useEffect(() => {
-      const { monetization } = document
+    function handle(event: MonetizationEvent): void {
+      setValue(event.detail[key])
+    }
 
-      if (!monetization) return
-
-      function handle(event: MonetizationEvent): void {
-        setValue(event.detail[key])
-      }
-
-      monetization.addEventListener('monetizationpending', handle)
-      monetization.addEventListener('monetizationstart', handle)
-      monetization.addEventListener('monetizationprogress', handle)
-      monetization.addEventListener('monetizationstop', handle)
-
-      return (): void => {
-        monetization.removeEventListener('monetizationpending', handle)
-        monetization.removeEventListener('monetizationstart', handle)
-        monetization.removeEventListener('monetizationprogress', handle)
-        monetization.removeEventListener('monetizationstop', handle)
-      }
-    }, [])
+    useListener({
+      onPending: handle,
+      onStart: handle,
+      onProgress: handle,
+      onStop: handle
+    })
 
     return value
   }

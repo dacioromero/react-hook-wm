@@ -8,6 +8,19 @@ Hooks for integrating React with [Web Monetization](https://webmonetization.org/
 
 ## Hooks
 
+### useListener
+
+Exposes a more React-ish way of interacting with monetization events through the following interface:
+
+```typescript
+interface UseListenerOptions {
+  onPending?: (event: MonetizationPendingEvent) => void
+  onStart?: (event: MonetizationStartEvent) => void
+  onProgress?: (event: MonetizationProgressEvent) => void
+  onStop?: (event: MonetizationStopEvent) => void
+}
+```
+
 ### useStatus
 
 Returns the current [monetization state](https://webmonetization.org/docs/api#states).

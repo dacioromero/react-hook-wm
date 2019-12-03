@@ -1,10 +1,6 @@
 import { useEffect, useReducer, useRef } from 'react'
 
-import {
-  MonetizationProgressEvent,
-  MonetizationProgressEventDetail,
-  MonetizationPendingEvent
-} from './types'
+import { useListener } from './listener'
 
 interface Counter {
   total: number
@@ -14,7 +10,7 @@ interface Counter {
 
 interface ProgressAction {
   type: 'progress'
-  payload: MonetizationProgressEventDetail
+  payload: MonetizationProgressEvent['detail']
 }
 
 interface ResetAction {
@@ -52,12 +48,8 @@ export function useCounter(): Counter {
   const [counter, dispatch] = useReducer(reducer, initialState)
   const requestIdRef = useRef<string>()
 
-  useEffect(() => {
-    const { monetization } = document
-
-    if (!monetization) return
-
-    function handlePending(event: MonetizationPendingEvent): void {
+  useListener({
+    onPending(event) {
       const { requestId } = event.detail
 
       if (requestIdRef.current !== requestId) {
@@ -65,26 +57,15 @@ export function useCounter(): Counter {
       }
 
       requestIdRef.current = requestId
-    }
-
-    function handleProgress(event: MonetizationProgressEvent): void {
+    },
+    onProgress(event) {
       const { detail } = event
 
       requestIdRef.current = detail.requestId
 
       dispatch({ type: 'progress', payload: event.detail })
     }
-
-    // monetizationstop events can include requestId for new paymentPointer
-
-    monetization.addEventListener('monetizationpending', handlePending)
-    monetization.addEventListener('monetizationprogress', handleProgress)
-
-    return (): void => {
-      monetization.removeEventListener('monetizationpending', handlePending)
-      monetization.removeEventListener('monetizationprogress', handleProgress)
-    }
-  }, [])
+  })
 
   return counter
 }
