@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useRef } from 'react'
+import { useReducer, useRef } from 'react'
 
 import { useListener } from './listener'
 

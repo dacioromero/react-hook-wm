@@ -19,19 +19,19 @@ export function useListener(options: UseListenerOptions): void {
 
     if (!monetization) return
 
-    function handlePending(event: MonetizationPendingEvent) {
+    function handlePending(event: MonetizationPendingEvent): void {
       optionsRef.current.onPending?.(event)
     }
 
-    function handleStart(event: MonetizationStartEvent) {
+    function handleStart(event: MonetizationStartEvent): void {
       optionsRef.current.onPending?.(event)
     }
 
-    function handleProgress(event: MonetizationProgressEvent) {
+    function handleProgress(event: MonetizationProgressEvent): void {
       optionsRef.current.onPending?.(event)
     }
 
-    function handleStop(event: MonetizationStopEvent) {
+    function handleStop(event: MonetizationStopEvent): void {
       optionsRef.current.onPending?.(event)
     }
 
@@ -40,7 +40,7 @@ export function useListener(options: UseListenerOptions): void {
     monetization.addEventListener('monetizationprogress', handleProgress)
     monetization.addEventListener('monetizationstop', handleStop)
 
-    return () => {
+    return (): void => {
       monetization.removeEventListener('monetizationpending', handlePending)
       monetization.removeEventListener('monetizationstart', handleStart)
       monetization.removeEventListener('monetizationprogress', handleProgress)
