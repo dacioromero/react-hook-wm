@@ -5,7 +5,7 @@
 - `useListener`.
 
 ### Changed
-- Using [dacioromero/wm-types] over local types.
+- Using [dacioromero/wm-types](https://github.com/dacioromero/wm-types) over local types.
 - Using `useListener` in all hooks.
 
 
@@ -21,11 +21,11 @@
 
 ## [0.1.0] - 2019-11-23
 ### Added
-- `useStatus`
-- `usePaymentPointer`
-- `useRequestId`
-- `useCounter`
-- `useHasPaid`
+- `useStatus`.
+- `usePaymentPointer`.
+- `useRequestId`.
+- `useCounter`.
+- `useHasPaid`.
 
 
 [0.1.3]: https://github.com/dacioromero/react-hook-wm/compare/0.1.2...0.1.3
