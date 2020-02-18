@@ -30,15 +30,15 @@ export function useListener(options: UseListenerOptions): void {
     }
 
     function handleStart(event: MonetizationStartEvent): void {
-      optionsRef.current.onPending?.(event)
+      optionsRef.current.onStart?.(event)
     }
 
     function handleProgress(event: MonetizationProgressEvent): void {
-      optionsRef.current.onPending?.(event)
+      optionsRef.current.onProgress?.(event)
     }
 
     function handleStop(event: MonetizationStopEvent): void {
-      optionsRef.current.onPending?.(event)
+      optionsRef.current.onStop?.(event)
     }
 
     monetization.addEventListener('monetizationpending', handlePending)
