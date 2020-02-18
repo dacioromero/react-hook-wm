@@ -1,7 +1,7 @@
-import { useReducer, useRef } from 'react'
+import { useReducer } from 'react'
+import { MonetizationProgressEvent, MonetizationStopEvent } from 'types-wm'
 
 import { useListener } from './listener'
-import { MonetizationProgressEvent } from 'types-wm'
 
 interface Counter {
   total: number
@@ -14,11 +14,12 @@ interface ProgressAction {
   payload: MonetizationProgressEvent['detail']
 }
 
-interface ResetAction {
-  type: 'reset'
+interface StopAction {
+  type: 'stop'
+  payload: MonetizationStopEvent['detail']
 }
 
-type Action = ProgressAction | ResetAction
+type Action = ProgressAction | StopAction
 
 const initialState: Counter = {
   total: 0,
@@ -38,8 +39,10 @@ function reducer(state: Counter, action: Action): Counter {
         code,
         scale
       }
-    case 'reset':
-      return initialState
+    case 'stop':
+      if (action.payload.finalized) return initialState
+
+      return state
     default:
       return state
   }
@@ -47,24 +50,13 @@ function reducer(state: Counter, action: Action): Counter {
 
 export function useCounter(): Counter {
   const [counter, dispatch] = useReducer(reducer, initialState)
-  const requestIdRef = useRef<string>()
 
   useListener({
-    onPending(event) {
-      const { requestId } = event.detail
-
-      if (requestIdRef.current !== requestId) {
-        dispatch({ type: 'reset' })
-      }
-
-      requestIdRef.current = requestId
-    },
     onProgress(event) {
-      const { detail } = event
-
-      requestIdRef.current = detail.requestId
-
       dispatch({ type: 'progress', payload: event.detail })
+    },
+    onStop(event) {
+      dispatch({ type: 'stop', payload: event.detail })
     }
   })
 
