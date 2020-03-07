@@ -1,12 +1,18 @@
 # Changelog
 
+## [0.1.7]
+### Added
+- [useReducedListener].
+### Changed
+- Use [useReducedListener] in [useHasPaid] and [useCounter].
+
 ## [0.1.6] - 2020-02-17
 ### Fixed
-- Call correct callback in useListener
+- Call correct callback in [useListener].
 
 ## [0.1.5] - 2020-02-17
 ### Fixed
-- Reset `useCounter` and `useHasPaid` when `monetizationstop` event's `finalized` property is `false`.
+- Reset [useCounter] and [useHasPaid] when `monetizationstop` event's `finalized` property is `false`.
 
 ## [0.1.4] - 2019-11-02
 ### Changed
@@ -14,18 +20,17 @@
 
 ## [0.1.3] - 2019-12-02
 ### Added
-- `useListener`.
+- [useListener].
 
 ### Changed
 - Use [dacioromero/wm-types](https://github.com/dacioromero/wm-types) over local types.
-- Use `useListener` in all hooks.
-
+- Use [useListener] in all hooks.
 
 ## [0.1.2] - 2019-11-24
 ### Changed
-- Reset `useHasPaid` on `requestId` change.
-- Reset `useCounter` on `requestId` change.
-- Default `useCounter` scale to `0`.
+- Reset [useHasPaid] on `requestId` change.
+- Reset [useCounter] on `requestId` change.
+- Default [useCounter] scale to `0`.
 
 ## [0.1.1] - 2019-11-24
 ### Changed
@@ -33,12 +38,20 @@
 
 ## [0.1.0] - 2019-11-23
 ### Added
-- `useStatus`.
-- `usePaymentPointer`.
-- `useRequestId`.
-- `useCounter`.
-- `useHasPaid`.
+- [useStatus].
+- [usePaymentPointer].
+- [useRequestId].
+- [useCounter].
+- [useHasPaid].
 
+[useListener]: README.md#useListener
+[useReducedListener]: README.md#useReducedListener
+[usePaymentPointer]: README.md#usePaymentPointer
+[useRequestId]: README.md#useRequestId
+[useCounter]: README.md#useStatus
+[useHasPaid]: README.md#useHasPaid
+
+[0.1.7]: https://github.com/dacioromero/react-hook-wm/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/dacioromero/react-hook-wm/compare/0.1.5...0.1.6
 [0.1.5]: https://github.com/dacioromero/react-hook-wm/compare/0.1.4...0.1.5
 [0.1.4]: https://github.com/dacioromero/react-hook-wm/compare/0.1.3...0.1.4
