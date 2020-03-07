@@ -16,7 +16,7 @@
 
 ## [0.1.4] - 2019-11-02
 ### Changed
-- Use [dacioromero/types-wm](https://github.com/dacioromero/react-hook-wm).
+- Use [dacioromero/types-wm](https://github.com/dacioromero/types-wm).
 
 ## [0.1.3] - 2019-12-02
 ### Added
