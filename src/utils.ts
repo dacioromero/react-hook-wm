@@ -1,13 +1,12 @@
 import { useReducer } from 'react'
 
-type State = symbol
-type NoopFunction = () => void
+type ForceUpdate = () => void
 
-const initialState: State = Symbol()
-const reducer = (): State => Symbol()
+const initialArg = Symbol()
+const reducer = (): symbol => Symbol()
 
-export function useForceUpdate(): NoopFunction {
-  const [, forceUpdate] = useReducer(reducer, initialState)
+export function useForceUpdate(): ForceUpdate {
+  const [, forceUpdate] = useReducer(reducer, initialArg)
 
-  return forceUpdate as NoopFunction
+  return forceUpdate
 }

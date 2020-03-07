@@ -1,18 +1,16 @@
-import { useState } from 'react'
+import { useReducedListener, ListenerReducer } from './reduced-listener'
 
-import { useListener } from './listener'
+const hasPaidReducer: ListenerReducer<boolean> = (prevHasPaid, event) => {
+  switch (event.type) {
+    case 'monetizationprogress':
+      return true
+    case 'monetizationstop':
+      return Boolean(event.detail.finalized)
+    default:
+      return prevHasPaid
+  }
+}
 
 export function useHasPaid(): boolean {
-  const [hasPaid, setHasPaid] = useState(false)
-
-  useListener({
-    onProgress(event) {
-      setHasPaid(true)
-    },
-    onStop(event) {
-      if (event.detail.finalized) setHasPaid(false)
-    }
-  })
-
-  return hasPaid
+  return useReducedListener(hasPaidReducer, false)
 }

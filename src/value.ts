@@ -1,35 +1,28 @@
-import { useState, useDebugValue } from 'react'
-import { MonetizationEvent, MonetizationEventDetail } from 'types-wm'
+import { useDebugValue } from 'react'
+import { MonetizationEvent } from 'types-wm'
 
-import { useListener } from './listener'
+import { useReducedListener, ListenerReducer } from './reduced-listener'
+
+type MonetizationEventDetail = MonetizationEvent['detail']
 
 type UseValue<T extends keyof MonetizationEventDetail> = () =>
   | MonetizationEventDetail[T]
   | null
 
 // Using a factory because dynamic keys would require keeping track of all values
-function createUseValue<T extends keyof MonetizationEventDetail>(
+function createUseValue<T extends keyof MonetizationEvent['detail']>(
   key: T
 ): UseValue<T> {
   type Value = ReturnType<UseValue<T>>
 
-  return function useValue(): Value {
-    const [value, setValue] = useState<Value>(null)
+  const valueReducer: ListenerReducer<Value> = (prevValue, event) => {
+    return event.detail[key]
+  }
 
+  return function useValue(): Value {
     useDebugValue(key)
 
-    function handle(event: MonetizationEvent): void {
-      setValue(event.detail[key])
-    }
-
-    useListener({
-      onPending: handle,
-      onStart: handle,
-      onProgress: handle,
-      onStop: handle
-    })
-
-    return value
+    return useReducedListener(valueReducer, null)
   }
 }
 
