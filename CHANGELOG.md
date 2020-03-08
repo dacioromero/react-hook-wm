@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.10] - 2020-03-07
+### Fixed
+- Export [CounterProvider] correctly.
+### Changed
+- Use `createProviderAndHook` internally for Context variants of counter and hasPaid.
+
 ## [0.1.9] - 2020-03-07
 ### Added
 - [useCounterContext]
