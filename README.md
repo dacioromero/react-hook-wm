@@ -15,6 +15,15 @@ or
 
 ## Hooks
 
+### useStatus
+Returns the current [monetization state](https://webmonetization.org/docs/api#states).
+
+### usePaymentPointer
+Returns the latest paymentPointer/requestId received from any [monetization event].
+
+### useRequestId
+Returns the latest paymentPointer/requestId received from any [monetization event].
+
 ### useListener
 Exposes a more React-ish way of interacting with monetization events through the following interface:
 
@@ -28,13 +37,7 @@ interface UseListenerOptions {
 ```
 
 ### useReducedListener
-Attaches the provided reducer to events from [useListener](#useListener) and returns the state produced. See the [source for useCounter](src/counter.tsx) or the [source for useHasPaid](src/has-paid.tsx) for examples.
-
-### useStatus
-Returns the current [monetization state](https://webmonetization.org/docs/api#states).
-
-### use[PaymentPointer/RequestId]
-Returns the last paymentPointer/requestId received from any monetization event. See them [here](https://webmonetization.org/docs/api#browser-events).
+Attaches the provided reducer to events from [useListener](#useListener) and returns the state produced. See the [source for useCounter](src/counter.ts) or the [source for useHasPaid](src/has-paid.ts) for examples.
 
 ### useCounter
 Returns the last assetCode (code) and the sum of the amounts (total) received from [`monetizationprogress`](https://webmonetization.org/docs/api#monetizationprogress) events.
@@ -59,6 +62,7 @@ Provides [useHasPaidContext]'s value. It's recommended that its children are mem
 ## Other Works
 - [react-web-monetization](https://github.com/sharafian/react-web-monetization)
 
+[monetization event]: https://webmonetization.org/docs/api#browser
 [useCounter]: #useCounter
 [useCounterContext]: #useCounterContext
 [useHasPaid]: #useHasPaid
