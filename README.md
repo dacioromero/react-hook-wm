@@ -23,7 +23,7 @@ interface UseListenerOptions {
 ```
 
 ### useReducedListener
-Attaches the provided reducer to events from [useListener](#useListener) and returns the state produced. See the [source for useCounter](src/counter.ts) or the [source for useHasPaid](src/has-paid.ts) for examples.
+Attaches the provided reducer to events from [useListener](#useListener) and returns the state produced. See the [source for useCounter](src/counter.tsx) or the [source for useHasPaid](src/has-paid.tsx) for examples.
 
 ### useStatus
 Returns the current [monetization state](https://webmonetization.org/docs/api#states).
