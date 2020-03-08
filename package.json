@@ -1,6 +1,6 @@
 {
   "name": "react-hook-wm",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "dist/index.js",
   "repository": "https://github.com/dacioromero/react-wm.git",
   "author": "Dacio Romero <dacioromero@gmail.com>",

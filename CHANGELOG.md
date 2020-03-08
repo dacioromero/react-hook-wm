@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.9]
+### Added
+- [useCounterContext]
+- [CounterProvider]
+- [useHasPaidContext]
+- [HasPaidProvider]
+
 ## [0.1.8]
 ### Changed
 - Set TypeScript target to ES2019 from ES5.
@@ -55,6 +62,7 @@
 [useCounter]: README.md#useStatus
 [useHasPaid]: README.md#useHasPaid
 
+[0.1.9]: https://github.com/dacioromero/react-hook-wm/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/dacioromero/react-hook-wm/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/dacioromero/react-hook-wm/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/dacioromero/react-hook-wm/compare/0.1.5...0.1.6
