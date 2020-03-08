@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.12] - 2020-03-07
+### Changed
+- Removed `createProviderAndHook`.
+
 ## [0.1.11] - 2020-03-07
 ### Changed
 - Set sideEffects to false in package.json.
@@ -72,6 +76,9 @@
 [useCounter]: README.md#useStatus
 [useHasPaid]: README.md#useHasPaid
 
+[0.1.12]: https://github.com/dacioromero/react-hook-wm/compare/0.1.11...0.1.12
+[0.1.11]: https://github.com/dacioromero/react-hook-wm/compare/0.1.10...0.1.11
+[0.1.10]: https://github.com/dacioromero/react-hook-wm/compare/0.1.9...0.1.10
 [0.1.9]: https://github.com/dacioromero/react-hook-wm/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/dacioromero/react-hook-wm/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/dacioromero/react-hook-wm/compare/0.1.6...0.1.7
