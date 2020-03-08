@@ -1,5 +1,6 @@
 import { useReducedListener, ListenerReducer } from './reduced-listener'
-import React, { createContext, FC, useContext } from 'react'
+
+import { createProviderAndHook } from './utils'
 
 const hasPaidReducer: ListenerReducer<boolean> = (prevHasPaid, event) => {
   switch (event.type) {
@@ -18,16 +19,10 @@ export function useHasPaid(): boolean {
   return useReducedListener(hasPaidReducer, initialHasPaid)
 }
 
-const HasPaidContext = createContext(initialHasPaid)
+const [HasPaidProvider, useHasPaidContext] = createProviderAndHook({
+  name: 'HasPaid',
+  useHook: useHasPaid,
+  defaultValue: initialHasPaid
+})
 
-export const HasPaidProvider: FC = ({ children }) => {
-  const hasPaid = useHasPaid()
-
-  return (
-    <HasPaidContext.Provider value={hasPaid}>
-      {children}
-    </HasPaidContext.Provider>
-  )
-}
-
-export const useHasPaidContext = (): boolean => useContext(HasPaidContext)
+export { HasPaidProvider, useHasPaidContext }
