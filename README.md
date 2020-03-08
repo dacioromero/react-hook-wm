@@ -34,8 +34,29 @@ Returns the last paymentPointer/requestId received from any monetization event. 
 ### useCounter
 Returns the last assetCode (code) and the sum of the amounts (total) received from [`monetizationprogress`](https://webmonetization.org/docs/api#monetizationprogress) events.
 
+### useCounterContext
+Alternative to [useCounter] that requires a [CounterProvider] in one of its parent components. Allows for tracking prior to using the hook.
+
 ### useHasPaid
 Returns a Boolean indicating whether or not the payment pointer has been paid yet. Useful for determining requesting for pay-locked content is ready.
 
+### useHasPaidContext
+Alternative to [useHasPaid] that requires a [HasPaidProvider] in one of its parent components. Allows for tracking prior to using the hook.
+
+## Components
+
+### CounterProvider
+Provides [useCounterContext]'s value. It's recommended that its children are memoized using `React.memo`.
+
+### HasPaidProvider
+Provides [useHasPaidContext]'s value. It's recommended that its children are memoized using `React.memo`.
+
 ## Other Works
 - [react-web-monetization](https://github.com/sharafian/react-web-monetization)
+
+[useCounter]: #useCounter
+[useCounterContext]: #useCounterContext
+[useHasPaid]: #useHasPaid
+[useHasPaidContext]: #useHasPaidContext
+[CounterProvider]: #CounterProvider
+[HasPaidProvider]: #HasPaidProvider

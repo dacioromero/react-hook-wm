@@ -1,4 +1,5 @@
 import { useReducedListener, ListenerReducer } from './reduced-listener'
+import React, { createContext, FC, useContext } from 'react'
 
 interface Counter {
   total: number
@@ -36,3 +37,17 @@ const counterReducer: ListenerReducer<Counter> = (prevCounter, event) => {
 export function useCounter(): Counter {
   return useReducedListener(counterReducer, initialCounter)
 }
+
+const CounterContext = createContext<Counter>(initialCounter)
+
+export const CounterContextProvider: FC = ({ children }) => {
+  const counter = useCounter()
+
+  return (
+    <CounterContext.Provider value={counter}>
+      {children}
+    </CounterContext.Provider>
+  )
+}
+
+export const useCounterContext = (): Counter => useContext(CounterContext)

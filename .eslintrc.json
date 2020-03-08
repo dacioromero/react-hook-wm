@@ -1,15 +1,18 @@
 {
   "extends": [
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
-    "react-hooks"
+    "react-hooks",
+    "react"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
     "@typescript-eslint/member-delimiter-style": ["error", {
       "multiline": {
         "delimiter": "none"
@@ -18,5 +21,10 @@
         "delimiter": "semi"
       }
     }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
