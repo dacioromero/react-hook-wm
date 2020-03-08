@@ -1,17 +1,17 @@
 # Changelog
 
-## [0.1.9]
+## [0.1.9] - 2020-03-07
 ### Added
 - [useCounterContext]
 - [CounterProvider]
 - [useHasPaidContext]
 - [HasPaidProvider]
 
-## [0.1.8]
+## [0.1.8] - 2020-03-07
 ### Changed
 - Set TypeScript target to ES2019 from ES5.
 
-## [0.1.7]
+## [0.1.7] - 2020-03-07
 ### Added
 - [useReducedListener].
 ### Changed
