@@ -5,6 +5,7 @@ Hooks for integrating React with [Web Monetization](https://webmonetization.org/
 ![npm](https://img.shields.io/npm/v/react-hook-wm)
 ![GitHub](https://img.shields.io/github/license/dacioromero/react-hook-wm)
 ![GitHub top language](https://img.shields.io/github/languages/top/dacioromero/react-hook-wm)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/dacioromero/react-hook-wm/publish/master)
 
 ## Install
     $ npm install react-hook-wm
