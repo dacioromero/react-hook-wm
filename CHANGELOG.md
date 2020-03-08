@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.11] - 2020-03-07
+### Changed
+- Set sideEffects to false in package.json.
+
 ## [0.1.10] - 2020-03-07
 ### Fixed
 - Export [CounterProvider] correctly.
