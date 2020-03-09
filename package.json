@@ -11,7 +11,7 @@
   ],
   "homepage": "https://github.com/dacioromero/react-hook-wm#readme",
   "bugs": "https://github.com/dacioromero/react-hook-wm/issues",
-  "repository": "dacioromero/react-hook-wm.git",
+  "repository": "dacioromero/react-hook-wm",
   "license": "MIT",
   "author": "Dacio Romero <dacioromero@gmail.com> (dacio.dev)",
   "sideEffects": false,
