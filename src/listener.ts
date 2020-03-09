@@ -6,19 +6,19 @@ import {
   MonetizationStopEvent
 } from 'types-wm'
 
-export interface UseListenerOptions {
+export interface UseListenerOpts {
   onPending?: (event: MonetizationPendingEvent) => void
   onStart?: (event: MonetizationStartEvent) => void
   onProgress?: (event: MonetizationProgressEvent) => void
   onStop?: (event: MonetizationStopEvent) => void
 }
 
-export function useListener(options: UseListenerOptions): void {
-  const optionsRef = useRef(options)
+export function useListener(opts: UseListenerOpts): void {
+  const optsRef = useRef(opts)
 
   useEffect(() => {
-    optionsRef.current = options
-  }, [options])
+    optsRef.current = opts
+  }, [opts])
 
   useEffect(() => {
     const { monetization } = document
@@ -26,19 +26,19 @@ export function useListener(options: UseListenerOptions): void {
     if (!monetization) return
 
     function handlePending(event: MonetizationPendingEvent): void {
-      optionsRef.current.onPending?.(event)
+      optsRef.current.onPending?.(event)
     }
 
     function handleStart(event: MonetizationStartEvent): void {
-      optionsRef.current.onStart?.(event)
+      optsRef.current.onStart?.(event)
     }
 
     function handleProgress(event: MonetizationProgressEvent): void {
-      optionsRef.current.onProgress?.(event)
+      optsRef.current.onProgress?.(event)
     }
 
     function handleStop(event: MonetizationStopEvent): void {
-      optionsRef.current.onStop?.(event)
+      optsRef.current.onStop?.(event)
     }
 
     monetization.addEventListener('monetizationpending', handlePending)

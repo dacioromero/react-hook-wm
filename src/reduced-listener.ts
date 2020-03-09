@@ -3,12 +3,9 @@ import { MonetizationEvent } from 'types-wm'
 
 import { useListener } from './listener'
 
-export type ListenerReducer<S = unknown> = (
-  prevState: S,
-  event: MonetizationEvent
-) => S
+export type ListenerReducer<S> = (prevState: S, event: MonetizationEvent) => S
 
-export function useReducedListener<S = unknown>(
+export function useReducedListener<S>(
   reducer: ListenerReducer<S>,
   initialState: S
 ): S {
