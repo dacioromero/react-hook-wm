@@ -36,9 +36,60 @@
       "prettier --write"
     ]
   },
-  "config": {
-    "glob": "src/**/*.ts?(x)"
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "react-hooks",
+      "react",
+      "import"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript"
+    ],
+    "rules": {
+      "@typescript-eslint/member-delimiter-style": [
+        "error",
+        {
+          "multiline": {
+            "delimiter": "none"
+          },
+          "singleline": {
+            "delimiter": "semi"
+          }
+        }
+      ],
+      "import/order": [
+        "warn",
+        {
+          "newlines-between": "always",
+          "alphabetize": {
+            "order": "asc"
+          }
+        }
+      ],
+      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react/prop-types": "off"
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/"
+  ],
   "dependencies": {
     "types-wm": "^1.1.0"
   },
