@@ -30,6 +30,12 @@
       "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  },
   "config": {
     "glob": "src/**/*.ts?(x)"
   },
@@ -41,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "@typescript-eslint/parser": "^2.22.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.3",
@@ -53,8 +60,5 @@
   },
   "peerDependencies": {
     "react": "^16.8.0"
-  },
-  "lint-staged": {
-    "*.ts?(x)": ["eslint --cache --fix", "prettier --write"]
   }
 }

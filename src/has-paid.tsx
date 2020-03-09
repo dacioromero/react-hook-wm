@@ -1,5 +1,6 @@
-import { useReducedListener, ListenerReducer } from './reduced-listener'
 import React, { createContext, FC, useContext } from 'react'
+
+import { useReducedListener, ListenerReducer } from './reduced-listener'
 
 const hasPaidReducer: ListenerReducer<boolean> = (prevHasPaid, event) => {
   switch (event.type) {

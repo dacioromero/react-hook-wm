@@ -1,7 +1,7 @@
 import { MonetizationState } from 'types-wm'
 
-import { useForceUpdate } from './utils'
 import { useListener } from './listener'
+import { useForceUpdate } from './utils'
 
 export function useStatus(): MonetizationState | null {
   const forceUpdate = useForceUpdate()

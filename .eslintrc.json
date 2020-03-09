@@ -1,15 +1,25 @@
 {
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
     "react-hooks",
-    "react"
+    "react",
+    "import"
   ],
   "rules": {
+    "import/order": ["warn", {
+      "newlines-between": "always",
+      "alphabetize": {
+        "order": "asc"
+      }
+    }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
