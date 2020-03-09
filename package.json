@@ -36,55 +36,9 @@
       "prettier --write"
     ]
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
-  },
+  "prettier": "@dacio/prettier-config",
   "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "react-hooks",
-      "react",
-      "import"
-    ],
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "plugin:react/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:import/typescript"
-    ],
-    "rules": {
-      "@typescript-eslint/member-delimiter-style": [
-        "error",
-        {
-          "multiline": {
-            "delimiter": "none"
-          },
-          "singleline": {
-            "delimiter": "semi"
-          }
-        }
-      ],
-      "import/order": [
-        "warn",
-        {
-          "newlines-between": "always",
-          "alphabetize": {
-            "order": "asc"
-          }
-        }
-      ],
-      "react-hooks/exhaustive-deps": "warn",
-      "react-hooks/rules-of-hooks": "error",
-      "react/prop-types": "off"
-    }
+    "extends": "@dacio"
   },
   "eslintIgnore": [
     "node_modules/",
@@ -94,13 +48,10 @@
     "types-wm": "^1.1.0"
   },
   "devDependencies": {
+    "@dacio/eslint-config": "^0.1.0",
+    "@dacio/prettier-config": "^0.1.0",
     "@types/react": "^16.9.23",
-    "@typescript-eslint/eslint-plugin": "^2.22.0",
-    "@typescript-eslint/parser": "^2.22.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "npm-run-all": "^4.1.5",

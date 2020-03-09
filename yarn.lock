@@ -33,6 +33,22 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@dacio/eslint-config@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@dacio/eslint-config/-/eslint-config-0.1.0.tgz#0463fda1d945063fedce80d82c2b6952dec03090"
+  integrity sha512-YLrOajp0pNJ0cSAvdhEU2r050G4mDeRQYT1wcfr0FMZ7vTbteqPgPUrdjofLPM+AG+pIFtEfw+mwE/ccQjJjGA==
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^2.22.0"
+    "@typescript-eslint/parser" "^2.22.0"
+    eslint-plugin-import "^2.20.1"
+    eslint-plugin-react "^7.19.0"
+    eslint-plugin-react-hooks "^2.5.0"
+
+"@dacio/prettier-config@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@dacio/prettier-config/-/prettier-config-0.1.0.tgz#1ab2c45cd5dae0da3f86aace7df1d1bbdbdb6cbe"
+  integrity sha512-J0eez1f/qvyVHRK/VHdYwA8VrGSXDB/z016bUqoOeh1rxFcEa6edOSOeu71qyiI8XMmod/dJPWdA73R4IgZ1ew==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
