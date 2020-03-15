@@ -21,9 +21,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "run-s build:clean build:compile",
-    "build:clean": "rimraf dist",
-    "build:compile": "tsc"
+    "build": "tsc"
   },
   "husky": {
     "hooks": {
