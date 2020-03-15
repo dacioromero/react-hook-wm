@@ -23,7 +23,7 @@ export function useListener(opts: UseListenerOpts): void {
   useEffect(() => {
     const { monetization } = document
 
-    if (!monetization) return
+    if (typeof monetization == 'undefined') return
 
     function handlePending(event: MonetizationPendingEvent): void {
       optsRef.current.onPending?.(event)

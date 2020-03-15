@@ -16,9 +16,10 @@ const initialCounter: Counter = {
 
 const counterReducer: ListenerReducer<Counter> = (prevCounter, event) => {
   switch (event.type) {
-    case 'monetizationprogress':
+    case 'monetizationprogress': {
       const { amount, assetCode: code, assetScale: scale } = event.detail
 
+      // eslint-disable-next-line no-mixed-operators
       const total = prevCounter.total + Number(amount) * 10 ** -scale
 
       return {
@@ -26,6 +27,7 @@ const counterReducer: ListenerReducer<Counter> = (prevCounter, event) => {
         code,
         scale
       }
+    }
     case 'monetizationstop':
       if (event.detail.finalized) return initialCounter
 

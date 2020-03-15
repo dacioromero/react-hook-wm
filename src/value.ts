@@ -15,7 +15,7 @@ function createUseValue<T extends keyof MonetizationEvent['detail']>(
 ): UseValue<T> {
   type Value = ReturnType<UseValue<T>>
 
-  const valueReducer: ListenerReducer<Value> = (prevValue, event) => {
+  const valueReducer: ListenerReducer<Value> = (_prevValue, event) => {
     return event.detail[key]
   }
 
