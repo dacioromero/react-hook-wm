@@ -1,6 +1,6 @@
 {
   "name": "react-hook-wm",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Hooks for integrating React with Web Monetization.",
   "keywords": [
     "react",
