@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.14] - 2020-03-18
+
+### Changed
+
+- Export UMD.
+- Export minified.
+
 ## [0.1.13] - 2020-03-18
 
 ### Changed
@@ -112,6 +119,7 @@
 [userequestid]: README.md#useRequestId
 [usecounter]: README.md#useStatus
 [usehaspaid]: README.md#useHasPaid
+[0.1.14]: https://github.com/dacioromero/react-hook-wm/compare/0.1.13...0.1.14
 [0.1.13]: https://github.com/dacioromero/react-hook-wm/compare/0.1.12...0.1.13
 [0.1.12]: https://github.com/dacioromero/react-hook-wm/compare/0.1.11...0.1.12
 [0.1.11]: https://github.com/dacioromero/react-hook-wm/compare/0.1.10...0.1.11
