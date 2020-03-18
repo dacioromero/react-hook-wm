@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "target": "es2019",
+    "target": "es2019", // TODO: Switch to esnext when build passes
     "strict": true,
     "alwaysStrict": true,
     "esModuleInterop": true,
@@ -16,8 +16,8 @@
     "importHelpers": true,
     "sourceMap": true,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["src/**/*"]
 }
