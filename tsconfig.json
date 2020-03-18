@@ -1,29 +1,23 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es2019",
     "strict": true,
     "alwaysStrict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "es2015",
-      "dom"
-    ],
-    "types": [
-      "react"
-    ],
+    "lib": ["es2015", "dom"],
+    "types": ["react"],
     "jsx": "react",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "declaration": true,
+    "importHelpers": true,
     "sourceMap": true,
+    "declaration": true,
     "declarationMap": true
   },
-  "files": [
-    "src/index.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"]
 }
