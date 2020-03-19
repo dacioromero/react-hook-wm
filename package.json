@@ -15,14 +15,11 @@
   "license": "MIT",
   "author": "Dacio Romero <dacioromero@gmail.com> (dacio.dev)",
   "sideEffects": false,
-  "main": "cjs/react-hook-wm.js",
-  "unpkg": "umd/react-hook-wm.js",
-  "module": "es/react-hook-wm.js",
+  "main": "dist/react-hook-wm.js",
+  "unpkg": "dist/react-hook-wm.umd.js",
+  "module": "dist/react-hook-wm.module.js",
   "files": [
-    "src",
-    "cjs",
-    "es",
-    "umd"
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c"
@@ -54,9 +51,7 @@
   },
   "eslintIgnore": [
     "node_modules/",
-    "cjs/",
-    "es/",
-    "umd/",
+    "dist/",
     "rollup.config.js"
   ],
   "dependencies": {
@@ -84,6 +79,7 @@
     "prettier": "^1.19.1",
     "react": "^16.13.0",
     "rollup": "^2.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-terser": "^5.3.0",
     "types-wm": "^1.1.0",
     "typescript": "^3.8.3"
