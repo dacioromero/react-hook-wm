@@ -990,6 +990,11 @@
   resolved "https://registry.yarnpkg.com/@dacio/prettier-config/-/prettier-config-0.2.5.tgz#12303f8d4962409c83dd080c7776b92a7b0c5807"
   integrity sha512-PEX6lLOyNEO3Radvf+QGcWUh/S51nE2k20XHD20imf+wyctQ9fadltHdvK3i8Tr9uUSb7+7G5/DAj85/8z44Rg==
 
+"@dacio/tsconfig@^0.2.10":
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/@dacio/tsconfig/-/tsconfig-0.2.11.tgz#0b9db6a5ead1274e7f236fa769486a030d524760"
+  integrity sha512-cQTj8XoVD3+94NNLPiRXFHeBztciPPkVSzhOWykO2hACXl8cxYYfN3Y/F0aNoBkrvNoblCtf30etZRFIAe47JQ==
+
 "@marionebl/sander@^0.6.0":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@marionebl/sander/-/sander-0.6.1.tgz#1958965874f24bc51be48875feb50d642fc41f7b"

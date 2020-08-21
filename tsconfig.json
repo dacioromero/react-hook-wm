@@ -1,23 +1,9 @@
 {
+  "extends": "@dacio/tsconfig",
   "compilerOptions": {
     "module": "es2020",
-    "target": "es2020",
-    "strict": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "lib": ["es2015", "dom"],
-    "types": ["react"],
-    "jsx": "react",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "importHelpers": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-    "moduleResolution": "node"
+    "types": ["react"]
   },
   "include": ["src/**/*"]
 }
