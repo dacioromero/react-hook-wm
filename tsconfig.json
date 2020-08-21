@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es2019", // TODO: Switch to esnext when build passes
+    "module": "es2020",
+    "target": "es2020",
     "strict": true,
     "alwaysStrict": true,
     "esModuleInterop": true,
