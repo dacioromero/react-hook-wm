@@ -89,9 +89,9 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "@types/react": "^16",
-    "react": "^16",
-    "types-wm": "^1"
+    "@types/react": "^16.8.0",
+    "react": "^16.8.0",
+    "types-wm": "^1.1.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {
