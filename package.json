@@ -21,6 +21,7 @@
   "jsnext:main": "dist/react-hook-wm.es.js",
   "module": "dist/react-hook-wm.es.js",
   "files": [
+    "src",
     "dist"
   ],
   "scripts": {
