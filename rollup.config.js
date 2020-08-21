@@ -10,12 +10,12 @@ export default {
     {
       file: packageJson.main,
       format: 'cjs',
-      sourcemap: true
+      sourcemap: true,
     },
     {
       file: packageJson.module,
       format: 'es',
-      sourcemap: true
+      sourcemap: true,
     },
     {
       file: packageJson.unpkg,
@@ -24,8 +24,8 @@ export default {
       plugins: [terser()],
       sourcemap: true,
       globals: {
-        react: 'React'
-      }
+        react: 'React',
+      },
     }
   ],
   plugins: [ts(), peerDepsExternal({ includeDependencies: true })]
