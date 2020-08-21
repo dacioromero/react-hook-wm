@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import React from 'react'
 import { MonetizationEvent } from 'types-wm'
 
 import { useListener } from './listener'
@@ -9,7 +9,7 @@ export function useReducedListener<S>(
   reducer: ListenerReducer<S>,
   initialState: S
 ): S {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = React.useReducer(reducer, initialState)
 
   useListener({
     onPending: dispatch,

@@ -1,4 +1,4 @@
-import React, { createContext, FC, useContext } from 'react'
+import React from 'react'
 
 import { useReducedListener, ListenerReducer } from './reduced-listener'
 
@@ -19,9 +19,9 @@ export function useHasPaid(): boolean {
   return useReducedListener(hasPaidReducer, initialHasPaid)
 }
 
-const HasPaidContext = createContext(initialHasPaid)
+const HasPaidContext = React.createContext(initialHasPaid)
 
-export const HasPaidProvider: FC = ({ children }) => {
+export const HasPaidProvider: React.FC = ({ children }) => {
   const hasPaid = useHasPaid()
 
   return (
@@ -31,4 +31,4 @@ export const HasPaidProvider: FC = ({ children }) => {
   )
 }
 
-export const useHasPaidContext = (): boolean => useContext(HasPaidContext)
+export const useHasPaidContext = (): boolean => React.useContext(HasPaidContext)

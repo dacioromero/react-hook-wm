@@ -1,4 +1,4 @@
-import React, { createContext, FC, useContext } from 'react'
+import React from 'react'
 
 import { useReducedListener, ListenerReducer } from './reduced-listener'
 
@@ -41,9 +41,9 @@ export function useCounter(): Counter {
   return useReducedListener(counterReducer, initialCounter)
 }
 
-const CounterContext = createContext<Counter>(initialCounter)
+const CounterContext = React.createContext<Counter>(initialCounter)
 
-export const CounterProvider: FC = ({ children }) => {
+export const CounterProvider: React.FC = ({ children }) => {
   const counter = useCounter()
 
   return (
@@ -53,4 +53,4 @@ export const CounterProvider: FC = ({ children }) => {
   )
 }
 
-export const useCounterContext = (): Counter => useContext(CounterContext)
+export const useCounterContext = (): Counter => React.useContext(CounterContext)

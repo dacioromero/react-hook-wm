@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import React from 'react'
 import {
   MonetizationPendingEvent,
   MonetizationStartEvent,
@@ -14,13 +14,13 @@ export interface UseListenerOpts {
 }
 
 export function useListener(opts: UseListenerOpts): void {
-  const optsRef = useRef(opts)
+  const optsRef = React.useRef(opts)
 
-  useEffect(() => {
+  React.useEffect(() => {
     optsRef.current = opts
   }, [opts])
 
-  useEffect(() => {
+  React.useEffect(() => {
     const { monetization } = document
 
     if (typeof monetization == 'undefined') return

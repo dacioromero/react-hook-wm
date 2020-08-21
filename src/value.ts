@@ -1,4 +1,4 @@
-import { useDebugValue } from 'react'
+import React from 'react'
 import { MonetizationEvent } from 'types-wm'
 
 import { useReducedListener, ListenerReducer } from './reduced-listener'
@@ -20,7 +20,7 @@ function createUseValue<T extends keyof MonetizationEvent['detail']>(
   }
 
   return function useValue(): Value {
-    useDebugValue(key)
+    React.useDebugValue(key)
 
     return useReducedListener(valueReducer, null)
   }
