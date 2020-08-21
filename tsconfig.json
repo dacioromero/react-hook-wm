@@ -2,6 +2,7 @@
   "extends": "@dacio/tsconfig",
   "compilerOptions": {
     "module": "es2020",
+    "target": "es2020",
     "lib": ["es2015", "dom"],
     "types": ["react"]
   },
