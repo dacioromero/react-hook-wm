@@ -968,12 +968,12 @@
   dependencies:
     find-up "^4.0.0"
 
-"@dacio/eslint-config-react@0.2.9":
+"@dacio/eslint-config-react@^0.2.9":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@dacio/eslint-config-react/-/eslint-config-react-0.2.9.tgz#3b888577235b1b3e8cc8dc7516d09d01afef9fa7"
   integrity sha512-UKSy2Pl1EGjN6elB9VhoU1RipQNk1QLXh/UNWmtBDuAyEuFKe0ArHCPr43fbqYPT6A5JMt3jB8stGFfNW5vx6g==
 
-"@dacio/eslint-config-typescript@0.2.5":
+"@dacio/eslint-config-typescript@^0.2.5":
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@dacio/eslint-config-typescript/-/eslint-config-typescript-0.2.5.tgz#7bd923c7a3078f5cac87a85a6fc4f0cd9294f823"
   integrity sha512-NKSTNtZqigg7ST6R4KSCP28J12g8YO8JVnd7D5tDcIg2LX85cVrn8RVW60ZY7PF0M+tTaqt1SzalDNLpRBLrHw==

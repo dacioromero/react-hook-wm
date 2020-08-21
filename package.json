@@ -64,8 +64,8 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@dacio/eslint-config": "^0.2.4",
-    "@dacio/eslint-config-react": "0.2.9",
-    "@dacio/eslint-config-typescript": "0.2.5",
+    "@dacio/eslint-config-react": "^0.2.9",
+    "@dacio/eslint-config-typescript": "^0.2.5",
     "@dacio/prettier-config": "^0.2.5",
     "@types/react": "^16.9.23",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
@@ -88,9 +88,9 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
-    "@types/react": "^16.9.23",
-    "react": "^16.8.0",
-    "types-wm": "^1.1.0"
+    "@types/react": "^16",
+    "react": "^16",
+    "types-wm": "^1"
   },
   "peerDependenciesMeta": {
     "@types/react": {
