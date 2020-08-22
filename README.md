@@ -7,6 +7,7 @@ Hooks for integrating React with [Web Monetization](https://webmonetization.org/
 ![GitHub](https://img.shields.io/github/license/dacioromero/react-hook-wm)
 ![GitHub top language](https://img.shields.io/github/languages/top/dacioromero/react-hook-wm)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/dacioromero/react-hook-wm/publish/master)
+![Codecov](https://img.shields.io/codecov/c/github/dacioromero/react-hook-wm)
 
 ## Install
 
