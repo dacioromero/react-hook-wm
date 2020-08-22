@@ -2,12 +2,12 @@
 
 Hooks for integrating React with [Web Monetization](https://webmonetization.org/).
 
-![npm bundle size](https://img.shields.io/bundlephobia/min/react-hook-wm)
-![npm](https://img.shields.io/npm/v/react-hook-wm)
-![GitHub](https://img.shields.io/github/license/dacioromero/react-hook-wm)
-![GitHub top language](https://img.shields.io/github/languages/top/dacioromero/react-hook-wm)
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/dacioromero/react-hook-wm/publish/master)
-![Codecov](https://img.shields.io/codecov/c/github/dacioromero/react-hook-wm)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/react-hook-wm)](https://bundlephobia.com/result?p=react-hook-wm)
+[![npm](https://img.shields.io/npm/v/react-hook-wm)](https://www.npmjs.com/package/react-hook-wm)
+[![GitHub](https://img.shields.io/github/license/dacioromero/react-hook-wm)](https://github.com/dacioromero/react-hook-wm/blob/master/LICENSE)
+[![GitHub top language](https://img.shields.io/github/languages/top/dacioromero/react-hook-wm)](https://github.com/dacioromero/react-hook-wm/search?l=typescript)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/dacioromero/react-hook-wm/publish/master)](https://github.com/dacioromero/react-hook-wm/actions?query=branch%3Amaster)
+[![Codecov](https://img.shields.io/codecov/c/github/dacioromero/react-hook-wm)](https://codecov.io/gh/dacioromero/react-hook-wm)
 
 ## Install
 
