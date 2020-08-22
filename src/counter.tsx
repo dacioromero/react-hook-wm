@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useReducedListener, ListenerReducer } from './reduced-listener'
 
-interface Counter {
+export interface Counter {
   total: number
   scale: number
   code: string | null
@@ -29,7 +29,8 @@ const counterReducer: ListenerReducer<Counter> = (prevCounter, event) => {
       }
     }
     case 'monetizationstop':
-      if (event.detail.finalized) return initialCounter
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-boolean-literal-compare
+      if (event.detail.finalized !== false) return initialCounter
 
       return prevCounter
     default:

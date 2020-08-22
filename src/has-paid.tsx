@@ -7,7 +7,8 @@ const hasPaidReducer: ListenerReducer<boolean> = (prevHasPaid, event) => {
     case 'monetizationprogress':
       return true
     case 'monetizationstop':
-      return Boolean(event.detail.finalized)
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-boolean-literal-compare
+      return event.detail.finalized === false
     default:
       return prevHasPaid
   }

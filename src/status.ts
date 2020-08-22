@@ -3,7 +3,9 @@ import { MonetizationState } from 'types-wm'
 import { useListener } from './listener'
 import { useForceUpdate } from './utils'
 
-export function useStatus(): MonetizationState | null {
+export type Status = MonetizationState | null
+
+export function useStatus(): Status {
   const forceUpdate = useForceUpdate()
 
   useListener({
