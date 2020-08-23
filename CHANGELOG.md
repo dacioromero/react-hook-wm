@@ -1,31 +1,31 @@
 # Changelog
 
-## [0.1.14] - 2020-03-18
+## [0.1.14] - (2020-03-18)
 
 ### Changed
 
 - Export UMD.
 - Export minified.
 
-## [0.1.13] - 2020-03-18
+## [0.1.13] - (2020-03-18)
 
 ### Changed
 
 - Export module.
 
-## [0.1.12] - 2020-03-07
+## [0.1.12] - (2020-03-07)
 
 ### Changed
 
 - Removed `createProviderAndHook`.
 
-## [0.1.11] - 2020-03-07
+## [0.1.11] - (2020-03-07)
 
 ### Changed
 
 - Set sideEffects to false in package.json.
 
-## [0.1.10] - 2020-03-07
+## [0.1.10] - (2020-03-07)
 
 ### Fixed
 
@@ -35,7 +35,7 @@
 
 - Use `createProviderAndHook` internally for Context variants of counter and hasPaid.
 
-## [0.1.9] - 2020-03-07
+## [0.1.9] - (2020-03-07)
 
 ### Added
 
@@ -44,13 +44,13 @@
 - [useHasPaidContext]
 - [HasPaidProvider]
 
-## [0.1.8] - 2020-03-07
+## [0.1.8] - (2020-03-07)
 
 ### Changed
 
 - Set TypeScript target to ES2019 from ES5.
 
-## [0.1.7] - 2020-03-07
+## [0.1.7] - (2020-03-07)
 
 ### Added
 
@@ -60,25 +60,25 @@
 
 - Use [useReducedListener] in [useHasPaid] and [useCounter].
 
-## [0.1.6] - 2020-02-17
+## [0.1.6] - (2020-02-17)
 
 ### Fixed
 
 - Call correct callback in [useListener].
 
-## [0.1.5] - 2020-02-17
+## [0.1.5] - (2020-02-17)
 
 ### Fixed
 
 - Reset [useCounter] and [useHasPaid] when `monetizationstop` event's `finalized` property is `false`.
 
-## [0.1.4] - 2019-11-02
+## [0.1.4] - (2019-11-02)
 
 ### Changed
 
 - Use [dacioromero/types-wm](https://github.com/dacioromero/types-wm).
 
-## [0.1.3] - 2019-12-02
+## [0.1.3] - (2019-12-02)
 
 ### Added
 
@@ -89,7 +89,7 @@
 - Use [dacioromero/wm-types](https://github.com/dacioromero/wm-types) over local types.
 - Use [useListener] in all hooks.
 
-## [0.1.2] - 2019-11-24
+## [0.1.2] - (2019-11-24)
 
 ### Changed
 
@@ -97,13 +97,13 @@
 - Reset [useCounter] on `requestId` change.
 - Default [useCounter] scale to `0`.
 
-## [0.1.1] - 2019-11-24
+## [0.1.1] - (2019-11-24)
 
 ### Changed
 
 - Remove `use-immer` dependency.
 
-## [0.1.0] - 2019-11-23
+## [0.1.0] - (2019-11-23)
 
 ### Added
 
