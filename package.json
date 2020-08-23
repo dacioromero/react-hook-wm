@@ -16,18 +16,18 @@
   "author": "Dacio Romero <dacioromero@gmail.com> (dacio.dev)",
   "sideEffects": false,
   "main": "dist/react-hook-wm.cjs.js",
-  "unpkg": "dist/react-hook-wm.umd.js",
   "umd:main": "dist/react-hook-wm.umd.js",
-  "jsnext:main": "dist/react-hook-wm.es.js",
+  "unpkg": "dist/react-hook-wm.umd.js",
   "module": "dist/react-hook-wm.es.js",
+  "jsnext:main": "dist/react-hook-wm.es.js",
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
     "build": "rollup -c",
-    "test": "jest",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -59,6 +59,13 @@
     "dist/",
     "rollup.config.js"
   ],
+  "jest": {
+    "preset": "ts-jest",
+    "setupFiles": [
+      "./src/setupTests.ts"
+    ],
+    "testEnvironment": "jsdom"
+  },
   "dependencies": {
     "tslib": "^2.0.1"
   },
@@ -108,12 +115,5 @@
     "types-wm": {
       "optional": true
     }
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "jsdom",
-    "setupFiles": [
-      "./src/setupTests.ts"
-    ]
   }
 }
