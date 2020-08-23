@@ -114,7 +114,9 @@ jobs:
 
       - run: yarn build
 
+      - run: echo ${{ github.ref }}
+
       - run: yarn publish
-        if: ${{ github.ref == 'ref/head/v*' }}
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}

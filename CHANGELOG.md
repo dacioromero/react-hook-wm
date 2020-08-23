@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.1.15](https://github.com/dacioromero/react-hook-wm/compare/0.1.14...0.1.15) (2020-08-23)
+
+### Fixed
+
+- loosen versions ([62ecb1e](https://github.com/dacioromero/react-hook-wm/commit/62ecb1e6fe7af85115f445555e463908d1d9c24b))
+- resolve bug w/ has-paid and counter, add tests ([1aacfbb](https://github.com/dacioromero/react-hook-wm/commit/1aacfbb05aa5362cefd6feb84d276d552fda0c8f))
+- tighten peerDependencies ([738f21d](https://github.com/dacioromero/react-hook-wm/commit/738f21d78a6826e2d98428740dae26f524fbba71))
+
 ## [0.1.14] - (2020-03-18)
 
 ### Changed
