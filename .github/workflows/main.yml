@@ -26,30 +26,20 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn install --frozen-lockfile
+
+      - name: Upload workspace
+        uses: actions/upload-artifact@v2
+        with:
+          name: workspace
+          path: '.'
   lint:
     runs-on: ubuntu-18.04
     needs: install
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v1
+      - name: Download worksace
+        uses: actions/download-artifact@v2
         with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v1
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - run: yarn install --frozen-lockfile
+          name: workspace
 
       - run: yarn lint src
   test:
@@ -57,26 +47,10 @@ jobs:
 
     needs: install
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v1
+      - name: Download worksace
+        uses: actions/download-artifact@v2
         with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v1
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - run: yarn install --frozen-lockfile
+          name: workspace
 
       - run: yarn test --coverage
 
@@ -89,26 +63,10 @@ jobs:
       - lint
       - test
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v1
+      - name: Download worksace
+        uses: actions/download-artifact@v2
         with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v1
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - run: yarn install --frozen-lockfile
+          name: workspace
 
       - run: yarn build
 
