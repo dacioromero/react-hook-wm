@@ -26,7 +26,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "lint": "eslint",
+    "format": "prettier --ignore-path .gitignore",
+    "lint": "eslint --ignore-path .gitignore",
     "release": "standard-version",
     "test": "jest"
   },
@@ -42,8 +43,8 @@
     ]
   },
   "lint-staged": {
-    "*.{json,md}": "prettier --write",
-    "*.{ts,tsx}": "eslint --cache --fix"
+    "*.{json,md,yml}": "yarn format --write",
+    "*.{ts,tsx}": "yarn lint --cache --fix"
   },
   "prettier": "@dacio/prettier-config",
   "eslintConfig": {
@@ -55,11 +56,6 @@
       "@dacio/eslint-config-react"
     ]
   },
-  "eslintIgnore": [
-    "node_modules/",
-    "dist/",
-    "rollup.config.js"
-  ],
   "jest": {
     "preset": "ts-jest",
     "setupFiles": [

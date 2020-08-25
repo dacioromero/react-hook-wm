@@ -4,18 +4,18 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 import packageJson from './package.json'
 
-export default {
+const config = {
   input: 'src/index.ts',
   output: [
     {
       file: packageJson.main,
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: true
     },
     {
       file: packageJson.module,
       format: 'es',
-      sourcemap: true,
+      sourcemap: true
     },
     {
       file: packageJson.unpkg,
@@ -24,9 +24,11 @@ export default {
       plugins: [terser()],
       sourcemap: true,
       globals: {
-        react: 'React',
-      },
+        react: 'React'
+      }
     }
   ],
   plugins: [ts(), peerDepsExternal({ includeDependencies: true })]
 }
+
+export default config
