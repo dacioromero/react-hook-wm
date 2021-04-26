@@ -1,4 +1,4 @@
-import { renderHook, act, HookResult } from '@testing-library/react-hooks'
+import { renderHook, act, RenderResult } from '@testing-library/react-hooks'
 
 import { useCounterContext, CounterProvider, Counter } from './counter'
 import { Monetization } from 'types-wm'
@@ -71,7 +71,7 @@ describe('monetizationstop', () => {
     })
   }
 
-  function initCounter(monetization: Monetization): HookResult<Counter> {
+  function initCounter(monetization: Monetization): RenderResult<Counter> {
     const { result } = renderHook(() => useCounterContext(), {
       wrapper: CounterProvider
     })
