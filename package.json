@@ -57,11 +57,27 @@
     ]
   },
   "jest": {
-    "preset": "ts-jest",
-    "setupFiles": [
-      "./src/setupTests.ts"
-    ],
-    "testEnvironment": "jsdom"
+    "projects": [
+      {
+        "preset": "ts-jest",
+        "displayName": "dom",
+        "testEnvironment": "jsdom",
+        "testMatch": [
+          "**/*.test.ts?(x)"
+        ],
+        "setupFiles": [
+          "./src/setupTests.ts"
+        ]
+      },
+      {
+        "preset": "ts-jest",
+        "displayName": "node",
+        "testEnvironment": "node",
+        "testMatch": [
+          "**/*.test.node.ts?(x)"
+        ]
+      }
+    ]
   },
   "dependencies": {
     "tslib": "^2.0.1"
