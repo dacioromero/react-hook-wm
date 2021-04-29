@@ -1,10 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import { useStatus } from './status'
 
-describe('server-side', () => {
-  it.todo('should return null')
-})
-
 describe('no monetization', () => {
   it('should return null without document.monetization', () => {
     const { result } = renderHook(() => useStatus())

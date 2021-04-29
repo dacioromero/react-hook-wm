@@ -21,6 +21,8 @@ export function useListener(opts: UseListenerOpts): void {
   }, [opts])
 
   React.useEffect(() => {
+    if (typeof document === 'undefined') return
+
     const { monetization } = document
 
     if (typeof monetization == 'undefined') return
