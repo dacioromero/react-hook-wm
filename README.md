@@ -9,6 +9,9 @@ Hooks for integrating React with [Web Monetization](https://webmonetization.org/
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/dacioromero/react-hook-wm/publish/master)](https://github.com/dacioromero/react-hook-wm/actions?query=branch%3Amaster)
 [![Codecov](https://img.shields.io/codecov/c/github/dacioromero/react-hook-wm)](https://codecov.io/gh/dacioromero/react-hook-wm)
 
+## Maintenance notice
+As I am no longer an employee of Coil, this repo will likely no longer be maintained. If you'd like to maintain this repo please leave an issue.
+
 ## Install
 
     $ npm install react-hook-wm
