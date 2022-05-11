@@ -7,3 +7,4 @@ updates:
       day: friday
     commit-message:
       prefix: chore
+    open-pull-requests-limit: 0
